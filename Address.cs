@@ -1,7 +1,11 @@
 ﻿using System;
 
-namespace Classes {
-    class Address {
+namespace Classes 
+{
+    public class Address
+    {
+        static void Main()
+        {
         public int index;
         public string country;
         public string city;
@@ -9,25 +13,19 @@ namespace Classes {
         public string house;
         public string apartment;
 
-        public Address() {
+        public Address()
+        {
             index = 11111;
             country = "Ukraine";
             city = "Kyiv";
-            street = "Khreschatyk";
+            street = "Khreshchatyk";
             house = "none";
             apartment = "a123";
         }
 
-        public void Print() {
+        public void Print()
+        {
             Console.WriteLine($"Index:{index}, Country:{country}, City:{city}, Street:{street}, House:{house}, Apartment:{apartment}");
         }
     }
-    class Converter
-    { double usd
-            double eur
-            double pln}
-    class Employee
-    { }
-    class User
-    { }
 }
