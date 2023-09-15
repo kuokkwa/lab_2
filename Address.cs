@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Classes 
+namespace Classes
 {
     public class Address
     {
-        static void Main()
+        static void Main(string[] args)
         {
         public int index;
         public string country;
@@ -19,7 +19,7 @@ namespace Classes
             country = "Ukraine";
             city = "Kyiv";
             street = "Khreshchatyk";
-            house = "none";
+            house = "A1";
             apartment = "a123";
         }
 
