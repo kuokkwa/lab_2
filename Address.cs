@@ -1,31 +1,19 @@
-﻿using System;
-
-namespace Classes
+﻿namespace lab_2
 {
-    public class Address
+    internal class Address
     {
-        static void Main(string[] args)
+        public class Credentials
         {
-        public int index;
-        public string country;
-        public string city;
-        public string street;
-        public string house;
-        public string apartment;
-
-        public Address()
-        {
-            index = 11111;
-            country = "Ukraine";
-            city = "Kyiv";
-            street = "Khreshchatyk";
-            house = "A1";
-            apartment = "a123";
-        }
-
-        public void Print()
-        {
-            Console.WriteLine($"Index:{index}, Country:{country}, City:{city}, Street:{street}, House:{house}, Apartment:{apartment}");
+            public int index = 11111;
+            public string country = "Ukraine";
+            public string city = "Kyiv";
+            public string street = "Khreshchatyk";
+            public string house = "A1";
+            public string apartment = "a123";
+            static void Main(string[] args)
+            {
+                Console.WriteLine(value: $"Index:{index}, Country:{country}, City:{city}, Street:{street}, House:{house}, apartment:{apartment}");
+            }
         }
     }
 }
