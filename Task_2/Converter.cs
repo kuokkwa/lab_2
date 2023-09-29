@@ -11,6 +11,7 @@ namespace Task_2
         private double usd;
         private double eur;
         private double pln;
+        public double AmountInUAH { get; set; }
 
         public Converter(double usd, double eur, double pln)
         {
