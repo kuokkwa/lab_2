@@ -8,31 +8,51 @@ namespace Task_2
 {
     public class Converter
     {
-        private double usd;
-        private double eur;
-        private double pln;
-        public double AmountInUAH { get; set; }
-
-        public Converter(double usd, double eur, double pln)
+        double uah;
+        public void SetUah(double value)
+        {
+            uah = value;
+        }
+        public double GetUah()
+        {
+            return uah;
+        }
+        double usd;
+        public double GetUsd()
+        {
+            return usd;
+        }
+        double eur;
+        public double GetEur()
+        {
+            return eur;
+        }
+        double pln;
+        public double GetPln()
+        {
+            return pln;
+        }
+        public double nUsd;
+        public void SetNUsd(double value)
+        {
+            nUsd = value;
+        }
+        public double MethodUsd()
+        {
+            return nUsd;
+        }
+        static double MethodUsd(double usd, double uah, double nUsd)
+        {
+            nUsd = usd * uah;
+            return nUsd;
+        }
+        public Converter(double usd, double eur, double pln, double uah)
         {
             this.usd = usd;
             this.eur = eur;
             this.pln = pln;
-        }
-
-        public double ConvertToUSD(double uah)
-        {
-            return uah / usd;
-        }
-
-        public double ConvertToEUR(double uah)
-        {
-            return uah / eur;
-        }
-
-        public double ConvertToPLN(double uah)
-        {
-            return uah / pln;
+            Console.Write("Enter the emount (UAH):");
+            this.uah = Convert.ToDouble(Console.ReadLine());
         }
     }
 }

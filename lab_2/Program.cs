@@ -5,18 +5,14 @@
         static void Main(string[] args)
         {
             Address address = new Address();
-            address.Index = "Index: 11111";
-            address.Country = "Country: Ukraine";
-            address.City = "City: Kyiv";
-            address.Street = "Street: Khreshchatyk";
-            address.House = "House: none";
-            address.Apartment = "Apartment: 11";
-            Console.WriteLine(address.Index);
-            Console.WriteLine(address.Country);
-            Console.WriteLine(address.City);
-            Console.WriteLine(address.Street);
-            Console.WriteLine(address.House);
-            Console.WriteLine(address.Apartment);
+            address.Index = "11111";
+            address.Country = "Ukraine";
+            address.City = "Kyiv";
+            address.Street = "Khreshchatyk";
+            address.House = "none";
+            address.Apartment = "11";
+            Console.WriteLine("Index: {0}, \nCountry: {1}, \nCity: {2}, \nStreet: {3}, \nHouse: {4}, \nApartment: {5}", address.Index, address.Country, address.City, address.Street, address.House, address.Apartment);
+            Console.ReadKey();
 
         }
     }

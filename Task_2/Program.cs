@@ -4,13 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Converter converter = new Converter(37.0, 40.0, 9.0);
-            Console.Write("UAH: ");
-            double amountInUAH = ;
-                                    
-            Console.WriteLine($"{amountInUAH} UAH = {converter.ConvertToUSD(amountInUAH):F2} USD");
-            Console.WriteLine($"{amountInUAH} UAH = {converter.ConvertToEUR(amountInUAH):F2} EUR");
-            Console.WriteLine($"{amountInUAH} UAH = {converter.ConvertToPLN(amountInUAH):F2} PLN");
+            Converter money = new Converter(37.01, 39.18, 8.47, 4);
+            Console.WriteLine("Курси валют: ");
+            Console.WriteLine("USD: {0}, \nEUR: {1}, \nPLN: {2}, \nEntered amount: {3}", money.GetUsd(), money.GetEur(), money.GetPln(), money.GetUah());
+            money.MethodUsd();
+            Console.WriteLine(money.MethodUsd());
+            Console.ReadKey();
         }
     }
 }
