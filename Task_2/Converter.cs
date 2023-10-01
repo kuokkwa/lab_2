@@ -37,14 +37,20 @@ namespace Task_2
         {
             nUsd = value;
         }
-        public double MethodUsd()
-        {
-            return nUsd;
-        }
-        static double MethodUsd(double usd, double uah, double nUsd)
+        public double MethodUsd(double usd, double uah, double nUsd)
         {
             nUsd = usd * uah;
             return nUsd;
+        }
+        public double MethodEur(double eur, double uah, double nEur)
+        {
+            nEur = eur * uah;
+            return nEur;
+        }
+        public double MethodPln(double pln, double hrn, double nPln)
+        {
+            nPln = pln * uah;
+            return nPln;
         }
         public Converter(double usd, double eur, double pln, double uah)
         {
