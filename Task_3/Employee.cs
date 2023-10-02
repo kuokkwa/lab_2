@@ -8,38 +8,48 @@ namespace Task_3
 {
     public class Employee
     {
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public string Position { get; set; }
-        public int Experience { get; set; }
+        private string firstName;
+        private string lastName;
 
-        public Employee(string lastName, string firstName)
+        public Employee(string firstName, string lastName)
         {
-            LastName = lastName;
-            FirstName = firstName;
-            Position = "";
-            Experience = 0;
+            this.firstName = firstName;
+            this.lastName = lastName;
         }
 
-        public double CalculateSalary()
+        public double CalculateSalary(string position, int experience)
         {
-            // Здесь можно добавить логику расчета оклада
-            // в зависимости от посады и стажа сотрудника
-            double baseSalary = 0; // Базовый оклад
-            double taxRate = 0.2;  // Налоговая ставка (пример)
+            double baseSalary = 0.0;
 
-            double salary = baseSalary * (1 - taxRate);
-            return salary;
-        }
+            switch (position.ToLower())
+            {
+                case "junior":
+                    baseSalary = 20000.0;
+                    break;
+                case "middle":
+                    baseSalary = 40000.0;
+                    break;
+                case "senior":
+                    baseSalary = 60000.0;
+                    break;
+                default:
+                    Console.WriteLine("Something went wrong, please check the text you entered");
+                    return 0.0;
+            }
 
-        public void DisplayInfo()
-        {
-            Console.WriteLine($"Фамилия: {LastName}");
-            Console.WriteLine($"Имя: {FirstName}");
-            Console.WriteLine($"Посада: {Position}");
-            double salary = CalculateSalary();
-            Console.WriteLine($"Оклад: {salary}");
-            Console.WriteLine($"Налоговый сбор: {salary * 0.2}"); // Пример налогового сбора
+            double experienceBonus = experience * 1000.0;
+
+            double totalSalary = baseSalary + experienceBonus;
+
+            double tax = 0.10 * totalSalary;
+
+            Console.WriteLine($"Name: {firstName}");
+            Console.WriteLine($"Surname: {lastName}");
+            Console.WriteLine($"Position: {position}");
+            Console.WriteLine($"Salary: {totalSalary:C}");
+            Console.WriteLine($"Tax: {tax:C}");
+
+            return totalSalary;
         }
     }
 }

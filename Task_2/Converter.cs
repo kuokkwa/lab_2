@@ -8,57 +8,45 @@ namespace Task_2
 {
     public class Converter
     {
-        double uah;
-        public void SetUah(double value)
-        {
-            uah = value;
-        }
-        public double GetUah()
-        {
-            return uah;
-        }
-        double usd;
-        public double GetUsd()
-        {
-            return usd;
-        }
-        double eur;
-        public double GetEur()
-        {
-            return eur;
-        }
-        double pln;
-        public double GetPln()
-        {
-            return pln;
-        }
-        public double nUsd;
-        public void SetNUsd(double value)
-        {
-            nUsd = value;
-        }
-        public double MethodUsd(double usd, double uah, double nUsd)
-        {
-            nUsd = usd * uah;
-            return nUsd;
-        }
-        public double MethodEur(double eur, double uah, double nEur)
-        {
-            nEur = eur * uah;
-            return nEur;
-        }
-        public double MethodPln(double pln, double hrn, double nPln)
-        {
-            nPln = pln * uah;
-            return nPln;
-        }
-        public Converter(double usd, double eur, double pln, double uah)
+        private double usd;
+        private double eur;
+        private double pln;
+
+        public Converter(double usd, double eur, double pln)
         {
             this.usd = usd;
             this.eur = eur;
             this.pln = pln;
-            Console.Write("Enter the emount (UAH):");
-            this.uah = Convert.ToDouble(Console.ReadLine());
+        }
+
+        public double ConvertToUSD(double amount)
+        {
+            return amount / usd;
+        }
+
+        public double ConvertToEUR(double amount)
+        {
+            return amount / eur;
+        }
+
+        public double ConvertToPLN(double amount)
+        {
+            return amount / pln;
+        }
+
+        public double ConvertFromUSD(double amount)
+        {
+            return amount * usd;
+        }
+
+        public double ConvertFromEUR(double amount)
+        {
+            return amount * eur;
+        }
+
+        public double ConvertFromPLN(double amount)
+        {
+            return amount * pln;
         }
     }
 }
