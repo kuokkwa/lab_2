@@ -20,17 +20,17 @@ namespace Task_4
             FirstName = firstName;
             LastName = lastName;
             Age = age;
-            RegistrationDate = DateTime.Now;
+            RegistrationDate = DateTime.Now; // Automatically set the registration date to the current date and time.
         }
 
         public void DisplayUserInfo()
         {
-            Console.WriteLine("User information:");
+            Console.WriteLine("User Information:");
             Console.WriteLine($"Login: {Login}");
-            Console.WriteLine($"Name: {FirstName}");
-            Console.WriteLine($"Surname: {LastName}");
-            Console.WriteLine($"Age: {Age} years");
-            Console.WriteLine($"Date of filling out the form: {RegistrationDate}");
+            Console.WriteLine($"First Name: {FirstName}");
+            Console.WriteLine($"Last Name: {LastName}");
+            Console.WriteLine($"Age: {Age}");
+            Console.WriteLine($"Registration Date: {RegistrationDate}");
         }
     }
 }
